@@ -1,0 +1,17 @@
+Language: Cpp
+IndentWidth: 4
+UseTab: Never
+BreakBeforeBraces: Linux
+PointerAlignment: Left
+AlignAfterOpenBracket: Align
+AlignTrailingComments: true
+AllowShortFunctionsOnASingleLine: Inline
+AllowShortIfStatementsOnASingleLine: false
+AllowShortLoopsOnASingleLine: false
+ColumnLimit: 120
+SpaceBeforeParens: ControlStatements
+SpaceAfterCStyleCast: false
+IndentCaseLabels: false
+MaxEmptyLinesToKeep: 1
+KeepEmptyLinesAtTheStartOfBlocks: false
+InsertNewlineAtEOF: true
