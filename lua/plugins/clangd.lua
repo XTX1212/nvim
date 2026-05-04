@@ -8,7 +8,8 @@ return {
             "clangd",
             "--background-index",
             "--clang-tidy",
-            "--header-insertion=iwyu"
+            "--header-insertion=iwyu",
+            "--compile-commands-dir=build",
           },
         },
       },

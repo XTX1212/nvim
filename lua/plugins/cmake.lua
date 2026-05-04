@@ -3,6 +3,8 @@ return {
     "Civitasv/cmake-tools.nvim",
     opts = {
       cmake_regenerate_on_save = false,
+      cmake_build_directory = "build",
+      cmake_generate_options = { "-DCMAKE_EXPORT_COMPILE_COMMANDS=ON" },
     },
     keys = {
       { "<leader>cG", "<cmd>CMakeGenerate<CR>", desc = "CMake Generate" },
