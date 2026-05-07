@@ -7,7 +7,7 @@ return {
         cpp = { "clang-format" },
       },
       formatters = {
-        clang-format = {
+        ["clang-format"] = {
           command = "C:\\Program Files\\LLVM\\bin\\clang-format.exe",
         },
       },

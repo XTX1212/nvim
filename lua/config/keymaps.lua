@@ -75,7 +75,6 @@ local function insert_file_header()
 end
 
 local function generate_function_doc()
-  -- 获取光标所在的节点
   local node = vim.treesitter.get_node()
   if not node then
     print("No Tree-sitter node found. Try :TSInstall c")
@@ -147,4 +146,3 @@ end
 
 vim.keymap.set("n", "<leader>nf", generate_function_doc, { desc = "Generate Doxygen function comment" })
 vim.keymap.set("n", "<leader>fh", insert_file_header, { desc = "Insert Doxygen File Header" })
-
