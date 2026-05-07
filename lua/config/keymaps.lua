@@ -14,26 +14,6 @@ keymap.set("n", "<leader>sh", "<C-w>s", { desc = "Split window horizontally" })
 keymap.set("v", "J", ":m '>+1<CR>gv=gv")
 keymap.set("v", "K", ":m '<-2<CR>gv=gv")
 
-local dap = require("dap")
-keymap.set("n", "<F5>", dap.continue, { desc = "Debug: Start/Continue" })
-keymap.set("n", "<F10>", dap.step_over, { desc = "Debug: Step Over" })
-keymap.set("n", "<C-F11>", dap.step_into, { desc = "Debug: Step Into" })
-keymap.set("n", "<F12>", dap.step_out, { desc = "Debug: Step Out" })
-keymap.set("n", "<leader>B", dap.toggle_breakpoint, { desc = "Debug: Toggle Breakpoint" })
-keymap.set("n", "<leader>du", function()
-  require("dapui").toggle()
-end, { desc = "Debug: Toggle UI" })
-
-keymap.set("n", "<leader>dk", function()
-  os.execute("taskkill /f /im main.exe")
-  os.execute("taskkill /f /im codelldb.exe")
-  local dapui = require("dapui")
-  if dapui then
-    dapui.close()
-  end
-  vim.notify("Killed debug processes & closed UI", "info", { title = "Debug" })
-end, { desc = "Kill debug processes and close UI" })
-
 local function insert_file_header()
   local filename = vim.fn.expand("%:t")
   local full_author = "Jiachen Xiong <9banwin@sina.com>"

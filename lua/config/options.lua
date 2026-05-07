@@ -6,12 +6,5 @@ local opt = vim.opt
 
 opt.tabstop = 8
 opt.shiftwidth = 8
-opt.softtabstop = 0
-opt.autoindent = true
-opt.expandtab = false
-opt.cindent = true
 
 opt.colorcolumn = "80"
-
-opt.number = true
-opt.relativenumber = true
